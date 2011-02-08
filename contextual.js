@@ -93,7 +93,7 @@ Drupal.behaviors.contextual = function(context) {
             $id.show();
 
             // Show the borders.
-            overlay.fadeIn('normal');
+            overlay.fadeIn('fast');
           }
         });
       }
