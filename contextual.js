@@ -35,7 +35,7 @@ Drupal.behaviors.contextual = function(context) {
         var marginRight = 0;
         var marginTop = 0;
         var marginBottom = 0;
-        var borderWidth = 11;
+        var borderWidth = 6;
 
         // Loop through all areas that the contextual links should appear on.
         $.each($elements, function(i, element) {
@@ -79,15 +79,15 @@ Drupal.behaviors.contextual = function(context) {
             $id.css({'top': top - $(window).scrollTop() - marginTop, 'left': left - $(window).scrollLeft() - marginLeft});
             $('.contextual-border-bottom', $id).css({'top': $el.outerHeight() + marginTop + marginBottom});
             $('.contextual-border-right', $id).css({'left': $el.outerWidth() + marginLeft + marginRight});
-            $('.contextual-toggler', $id).css({'right': -10 - marginLeft - marginRight});
+            $('.contextual-toggler', $id).css({'right': -5 - marginLeft - marginRight});
             $('.contextual-links', $id).css({'right': - marginLeft - marginRight});
 
             // Set the width and height.
             $id.css({'width': $el.outerWidth()});
-            $('.contextual-border-top, .contextual-border-bottom', $id).css({'width': $el.outerWidth() - 26 + marginLeft + marginRight});
-            $('.contextual-border-bottom', $id).css({'width': $el.outerWidth() + marginLeft + marginRight});
-            $('.contextual-border-left', $id).css({'height': $el.outerHeight() + 20 + marginTop + marginBottom});
-            $('.contextual-border-right', $id).css({'height': $el.outerHeight() + marginTop + marginBottom});
+            $('.contextual-border-top, .contextual-border-bottom', $id).css({'width': $el.outerWidth() + marginLeft + marginRight + 10});
+            $('.contextual-border-bottom', $id).css({'width': $el.outerWidth() + marginLeft + marginRight + 10});
+            $('.contextual-border-left', $id).css({'height': $el.outerHeight() + marginTop + marginBottom + 5});
+            $('.contextual-border-right', $id).css({'height': $el.outerHeight() + marginTop + marginBottom + 5});
 
             // Show the action button.
             $id.show();
